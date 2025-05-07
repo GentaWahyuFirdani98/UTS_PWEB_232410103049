@@ -1,70 +1,120 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Sistem Serap Aspirasi Mahasiswa FASILKOM UNEJ
+Aplikasi web untuk menampung dan mengelola aspirasi mahasiswa Fakultas Ilmu Komputer Universitas Jember.
+Deskripsi
+Sistem Serap Aspirasi Mahasiswa FASILKOM UNEJ adalah aplikasi web berbasis Laravel yang bertujuan memudahkan mahasiswa dalam menyampaikan aspirasi mereka dan pihak fakultas dalam mengelola aspirasi tersebut secara terorganisir. Aplikasi ini dibuat sebagai project UTS Pemrograman Web.
+Fitur
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Login dan autentikasi user (simulasi)
+Dashboard dengan statistik aspirasi
+Pengelolaan daftar aspirasi
+Profil mahasiswa
+Tampilan responsif untuk berbagai ukuran layar
 
-## About Laravel
+Teknologi
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Framework: Laravel
+Frontend: Blade templating, Bootstrap 5, Font Awesome
+Data Storage: Array (tanpa database)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Struktur Project
+uts_pweb_fasilkom/
+├── app/
+│   └── Http/
+│       └── Controllers/
+│           ├── Controller.php      # Base controller
+│           └── PageController.php  # Controller utama
+├── resources/
+│   └── views/
+│       ├── layouts/
+│       │   └── app.blade.php       # Template utama
+│       ├── components/
+│       │   ├── navbar.blade.php    # Navigasi
+│       │   └── footer.blade.php    # Footer
+│       ├── dashboard.blade.php     # Halaman dashboard
+│       ├── login.blade.php         # Halaman login
+│       ├── profile.blade.php       # Halaman profil
+│       └── pengelolaan.blade.php   # Halaman data aspirasi
+└── routes/
+    └── web.php                     # Definisi routing
+Instalasi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Clone repository ini ke direktori lokal Anda:
 
-## Learning Laravel
+git clone https://github.com/yourusername/uts_pweb_fasilkom.git
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Masuk ke direktori project:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+cd uts_pweb_fasilkom
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Install dependencies menggunakan Composer:
 
-## Laravel Sponsors
+composer install
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Salin file .env.example menjadi .env:
 
-### Premium Partners
+cp .env.example .env
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Generate application key:
 
-## Contributing
+php artisan key:generate
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Jalankan development server:
 
-## Code of Conduct
+php artisan serve
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Akses aplikasi di browser pada alamat:
 
-## Security Vulnerabilities
+http://localhost:8000
+Penggunaan
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Login: Masukkan username dan password apa saja (simulasi)
+Dashboard: Lihat statistik aspirasi dan sambutan personal
+Pengelolaan: Akses daftar aspirasi mahasiswa
+Profil: Lihat informasi profil mahasiswa
 
-## License
+Alur Aplikasi
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# UTS_PWEB_232410103049
->>>>>>> 356b4a2d66a220da22a2a2fc3c4e6200e7135450
+User mengakses / dan diarahkan ke halaman login
+Setelah login, user diarahkan ke dashboard (dengan parameter username)
+User dapat mengakses halaman lain melalui menu navigasi
+Semua data ditampilkan dari array (tanpa database)
+
+Komponen Utama
+Controllers
+
+PageController: Menangani semua logika aplikasi
+
+tampilinLogin(): Menampilkan halaman login
+tampilinDashboard(): Menampilkan dashboard dengan sambutan personal
+tampilinProfile(): Menampilkan profil mahasiswa
+tampilinPengelolaan(): Menampilkan daftar aspirasi
+
+
+
+Views
+
+Layouts: Template utama yang digunakan oleh semua halaman
+Components: Komponen reusable seperti navbar dan footer
+Pages: Halaman spesifik seperti dashboard, profil, dan pengelolaan
+
+Routes
+
+Definisi routing untuk mengarahkan request ke controller yang sesuai
+Penggunaan named routes untuk konsistensi navigasi
+
+Konsep Implementasi
+
+MVC Pattern: Pemisahan logika (Controller) dari tampilan (View)
+Blade Templating: Template reusable dan inheritance untuk konsistensi UI
+Routing: Definisi alur aplikasi yang jelas dan terorganisir
+Parameter Request: Pengambilan data dari query string untuk personalisasi
+Komponenisasi: Pemecahan tampilan menjadi komponen reusable
+Responsive Design: Tampilan yang adaptif di berbagai ukuran layar
+
+Pengembangan Lebih Lanjut
+
+Implementasi database untuk penyimpanan data yang persisten
+Autentikasi user yang sesungguhnya
+Fitur CRUD untuk aspirasi mahasiswa
+Integrasi dengan API lain untuk data real-time
+Sistem notifikasi untuk update status aspirasi
